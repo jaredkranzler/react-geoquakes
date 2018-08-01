@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import QuakesList from './QuakesList'
-
-
+import QuakeMap from './QuakeMap'
+import './App.css' 
 
 class App extends Component {
   constructor(){
@@ -10,6 +10,8 @@ class App extends Component {
       quakes: []
     }
   }
+
+
 
   getQuakes = async() => {
     try{
@@ -33,11 +35,12 @@ class App extends Component {
     });
   }
 
+
   render() {
     return (
       <div className="app">
         <div className="mapContainer">
-          ...put Map Component here...
+          <QuakeMap google={this.props.google} />
         </div>
         <div className="quakeContainer">
           <h1>Earthquakes from the past week: </h1>
@@ -49,8 +52,6 @@ class App extends Component {
 }
 
 export default App;
-
-
 
 
 
