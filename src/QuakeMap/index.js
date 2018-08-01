@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
  
 const AnyReactComponent = ({ text }) => <div>{}</div>;
- 
+
+      
 class QuakeMap extends Component {
   static defaultProps = {
     center: {
@@ -15,6 +16,7 @@ class QuakeMap extends Component {
 
 
 
+
   render() {
     return (
       // Important! Always set the container height explicitly
@@ -24,11 +26,12 @@ class QuakeMap extends Component {
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom} 
         >
-          <AnyReactComponent
-            lat={30.2682}
-            lng={-97.74295}
-            text={'Kreyser Avrora'}
-          />
+        <AnyReactComponent
+          lat={30.2682}
+          lng={-97.74295}
+          text={'Kreyser Avrora'}
+
+        />
          
         
 
