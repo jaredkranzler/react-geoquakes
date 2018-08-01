@@ -27,9 +27,9 @@ class App extends Component {
     this.getQuakes().then((data) =>{
       console.log(data, ' this is data in componentDidMount in App')
       // console.log(this.state, ' this is this state')
-      const quakes = data.features.map(q => q)
-      console.log(quakes)
-      this.setState({quakes: quakes})
+      // const quakes = data.features.map(q => q)
+      // console.log(quakes)
+      this.setState({quakes: data.features})
     });
   }
 
